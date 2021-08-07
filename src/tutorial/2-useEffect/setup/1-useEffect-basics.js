@@ -11,9 +11,11 @@ const UseEffectBasics = () => {
     console.log('Use Effect called');
     //To render conditionally the conditional must be inside due to hooks rules
     if(value >= 2){
-    document.title = `Document Title ${value}`
+      document.title = `Document Title ${value}`
     }
-  });
+    //creating a blank parameter makes it render on first occasion only
+    //Adding a parameter makes it render when there is a change in it
+  },[value]);
 
   return (
     <>
