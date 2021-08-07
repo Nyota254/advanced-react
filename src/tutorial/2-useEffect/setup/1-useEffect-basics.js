@@ -8,8 +8,11 @@ const UseEffectBasics = () => {
   const [value,setValue] = useState(0)
 
   useEffect(() => {
-    console.log('Use Effect called')
+    console.log('Use Effect called');
+    //To render conditionally the conditional must be inside due to hooks rules
+    if(value >= 2){
     document.title = `Document Title ${value}`
+    }
   });
 
   return (
